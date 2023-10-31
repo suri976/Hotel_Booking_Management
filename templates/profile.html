@@ -1,0 +1,78 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+<style>
+ body {
+ background: rgb(78, 196, 243);
+ background-size: 400% 400%;
+ animation: gradient 15s ease infinite;
+
+  background-image: url('https://c8.alamy.com/comp/2A5MNJ7/decorative-background-for-home-office-and-hotel-modern-interior-design-living-room-sofa-and-modern-interior-details-on-a-white-wall-background-2A5MNJ7.jpg');
+  
+ 
+
+}
+
+
+
+
+table {
+border-collapse: collapse;
+width: 100%;
+}
+
+th, td {
+padding: 8px;
+text-align: left;
+border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: rgb(79, 100, 170);}
+
+tr:hover {background-color: rgb(120, 111, 240);}
+</style>
+  
+     
+
+</style>
+</head>
+<body>
+
+
+  <h2 align="center">Profile</h2>
+  <div class="container " >
+  <table class="table table-condensed"border="1" width="500" >
+    <thead>
+<tr><th>Id</th></th><th>Name</th><th>Contact</th><th>Mail</th><th>Address</th><th>Username</th><th>Password</th></tr>
+    </thead>
+    <tbody>
+{% for row in d%}
+<tr>
+{% for col in row %}
+<th>{{col}}</th>
+{%endfor%}
+<th>
+<form method="post" action="updateprofile">
+
+<input type="hidden" name="cid" value="{{row[0]}}">
+<input type="submit" value="update">
+</form>
+</th>
+</tr>
+</tbody>
+{%endfor%}
+</table>
+<div style=" border-color:blue;text-align:center" >
+  <button onclick="window.location.href = 'customerHomePage'">GoBack</button>
+  
+</div>
+
+</div>
+</body>
+</html>
