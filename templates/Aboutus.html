@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <p>A hotel or a guest-house is a large building with many rooms, where people can sleep when they are not at home. A motel is a hotel especially for motorists - people who drive cars - where the room door usually opens into the parking lot rather than to an interior corridor. Inn is sometimes used to mean a smaller hotel.</p>
+  <p>Some boutique, high-end hotels have custom decorated rooms. Some hotels offer meals as part of a room and board arrangement.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Surendra Reddy Dwarampudi</h2>
+        <p class="title">CEO & Founder</p>
+        <p>The hotel was launched in May 2013. Hotel today is the world’s leading chain of hotels, homes, and spaces.</p>
+        <p>Surrendra@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Hemalatha Atmakuri</h2>
+        <p class="title">Art Director</p>
+        <p>She believed that everyone deserves a beautifully designed, chic and comfortable living space. And everyone deserves a better life.</p>
+        <p>Hemalatha@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+  
+      <div class="container">
+        <h2>Bandaru Anila</h2>
+        <p class="title">Designer</p>
+        <p>Design involves problem-solving and creativity. A design may also be a mere plan that does not include a production or engineering process although a working knowledge of such processes is usually expected of designers.</p>
+        <p>Anila@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Shrivalli Pabhisetty</h2>
+        <p class="title">Art Director</p>
+        <p>Art directors are responsible for the visual style and images in magazines, newspapers, product packaging, and movie and television productions.</p>
+        <p>Shrivalli@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+      
+
+            body {
+            background: rgb(78, 196, 243);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+           
+             background-image: url('https://www.travelplusstyle.com/wp-content/uploads/2016/01/sonevajani-1880.jpg');
+             
+            
+           
+           }
+           
+           table {
+           border-collapse: collapse;
+           width: 100%;
+           }
+           
+           th, th {
+           padding: 8px;
+           text-align: left;
+           border-bottom: 1px solid #ddd;
+           }
+           
+           tr:hover {background-color: rgb(79, 100, 170);}
+           
+           tr:hover {background-color: rgb(120, 111, 240);}
+           </style>
+           </head>
+           <body>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+          
+           
+           
+             <h2 align="center">Customers</h2>
+             <div class="container " >
+             <table class="table table-condensed"border="1" width="500" >
+               <thead>
+<tr style="text-align:center;"><th>Room ID</th><th>Room Type</th><th>Room Price</th><th colspan="3" >Action</th></tr></thead>
+<tbody>
+{% for row in d%}
+<tr>
+{% for col in row %}
+<th>{{col}}</th>
+{%endfor%}
+<th>
+    <form method="post" action="updateRoom">
+    
+    <input type="hidden" name="roomno" value="{{row[0]}}">
+    <input type="submit" value="Update">
+    
+</form>
+</th>
+
+<th>
+<form method="post" action="deleteRoom">
+
+<input type="hidden" name="roomno" value="{{row[0]}}">
+<input type="submit" value="Delete">
+</form>
+</th>
+
+
+
+</tr>
+</tbody>
+
+{%endfor%}
+</table>
+<div style=" border-color:blue;text-align:center" >
+    <button onclick="window.location.href = 'adminHomePage'">GoBack</button>
+      
+    </div>
+</div>
+</body>
+</html>
+
+

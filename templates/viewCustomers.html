@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      
+
+      body {
+      background: rgb(78, 196, 243);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+     
+       background-image: url('https://www.travelplusstyle.com/wp-content/uploads/2016/01/sonevajani-1880.jpg');
+       
+      
+     
+     }
+     
+     table {
+     border-collapse: collapse;
+     width: 100%;
+     }
+     
+     th, th {
+     padding: 8px;
+     text-align: left;
+     border-bottom: 1px solid #ddd;
+     }
+     
+     tr:hover {background-color: rgb(79, 100, 170);}
+     
+     tr:hover {background-color: rgb(120, 111, 240);}
+     </style>
+     </head>
+     <body>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+     
+     
+       <h2 align="center">Customers</h2>
+       <div class="container " >
+       <table class="table table-condensed"border="1" width="500" >
+         <thead>
+<tr><th>ID</th><th>Name</th><th>Contact</th><th>Email</th><th>Address</th><th>UserName</th><th>Password</th><th>Action</th></tr></thead>
+<tbody>
+  
+{% for row in d%}
+<tr>
+{% for col in row %}
+<th>{{col}}</th>
+{%endfor%}
+
+
+<th >
+<form method="post" action="blockCustomer">
+
+<input type="hidden" name="cid" value="{{row[0]}}">
+<input type="submit" value="Block">
+</th>
+</form>
+
+</th>
+</tr>
+</tbody>
+
+{%endfor%}
+</table>
+<div style=" border-color:blue;text-align:center" >
+  <button onclick="window.location.href = 'adminHomePage'">GoBack</button>
+    
+  </div>
+</div>
+</body>
+</html>
+
+
